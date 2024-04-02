@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+<!-- Database connection settings -->
+<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+<property name = "hibernate.connection.url">jdbc:mysql://localhost:3306/library</property>
+
+<property name="connection.username">root</property>
+
+<property name="connection.password">S@th2408</property>
+
+<!-- Automatically create or update database schema -->
+<property name="hbm2ddl.auto">update</property>
+<!-- Specify the dialect for your database -->
+<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+<!-- Enable or disable showing SQL statements in the console -->
+<property name="show_sql">true</property>
+<property name="format_sql">true</property>
+
+<!-- Specify the package(s) where your entity classes are located -->
+
+
+<!-- Additional mappings can be included here -->
+<mapping class ="sathwika1.librarymanagementsystem.books"/>
+<mapping class ="sathwika1.librarymanagementsystem.Members"/>
+<mapping class ="sathwika1.librarymanagementsystem.Transactions"/>
+<mapping class ="sathwika1.librarymanagementsystem.App"/>
+<mapping class ="sathwika1.librarymanagementsystem.Admin"/>
+
+</session-factory>
+</hibernate-configuration>
